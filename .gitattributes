@@ -1,0 +1,8 @@
+# Normaliser les fins de ligne pour tous les fichiers texte
+* text=auto
+
+# Définir explicitement la gestion des fins de ligne pour certains types de fichiers
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
