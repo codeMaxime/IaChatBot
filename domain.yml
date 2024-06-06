@@ -1,33 +1,33 @@
-version: "3.1"
-
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - saluer
+  - au_revoir
+  - demander_meteo
+  - inform  # intention pour fournir des informations supplémentaires comme le lieu
+
+entities:
+  - lieu
+
+slots:
+  lieu:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: lieu
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_saluer:
+    - text: "Bonjour! Comment puis-je vous aider aujourd'hui?"
+  utter_au_revoir:
+    - text: "Au revoir! Passez une bonne journée!"
+  utter_demander_lieu:
+    - text: "Pour quelle ville souhaitez-vous connaître la météo?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+actions:
+  - utter_saluer
+  - utter_au_revoir
+  - utter_demander_lieu
+  - action_meteo
 
 session_config:
   session_expiration_time: 60

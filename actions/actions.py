@@ -1,27 +1,23 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+import requests
+from typing import Any, Text, Dict, List
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
+class ActionMeteo(Action):
 
-# This is a simple example for a custom action which utters "Hello World!"
+    def name(self) -> Text:
+        return "action_meteo"
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        lieu = tracker.get_slot('lieu')
+        if lieu:
+            # Remplacez 'YOUR_API_KEY' par votre clé API de météo
+            response = requests.get(f"http://api.weatherapi.com/v1/current.json?key=6fdbc8c03d7041ffa15150036240606&q={lieu}")
+            if response.status_code == 200:
+                weather_data = response.json()
+                temperature = weather_data['current']['temp_c']
+                condition = weather_data['current']['condition']['text']
+                dispatcher.utter
