@@ -20,3 +20,8 @@ rules:
     steps:
       - intent: inform
       - action: action_meteo
+
+  - rule: Handle unknown phrases
+    steps:
+      - intent: nlu_fallback
+      - action: action_collect_unknown_phrases

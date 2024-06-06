@@ -1,30 +1,253 @@
-version: "2.0"
 nlu:
-  - intent: saluer
-    examples: |
-      - Bonjour
-      - Salut
-      - Hello
+- examples: '- Bonjour
 
-  - intent: au_revoir
-    examples: |
-      - Au revoir
-      - À bientôt
-      - Bye
+    - Salut
 
-  - intent: demander_meteo
-    examples: |
-      - Quelle est la météo à [Paris](lieu) ?
-      - Quel temps fait-il à [Londres](lieu) ?
-      - Météo pour [New York](lieu) ?
-      - Quel temps fait-il à [Lezoux](lieu) ?
-      - Quel temps fait-il à [Lyon](lieu) ?
+    - Hello
 
-  - intent: inform
-    examples: |
-      - à [Paris](lieu)
-      - à [Londres](lieu)
-      - à [Lezoux](lieu)
-      - [Paris](lieu)
-      - [Londres](lieu)
-      - [Lezoux](lieu)
+    '
+  intent: saluer
+- examples: '- Au revoir
+
+    - Ã€ bientÃ´t
+
+    - Bye
+
+    '
+  intent: au_revoir
+- examples: '- Quelle est la mÃ©tÃ©o Ã  [Paris](lieu) ?
+
+    - Quel temps fait-il Ã  [Londres](lieu) ?
+
+    - MÃ©tÃ©o pour [New York](lieu) ?
+
+    - Quel temps fait-il Ã  [Lezoux](lieu) ?
+
+    - Quel temps fait-il Ã  [Lyon](lieu) ?
+
+    '
+  intent: demander_meteo
+- examples: '- Ã  [Paris](lieu)
+
+    - Ã  [Londres](lieu)
+
+    - Ã  [Lezoux](lieu)
+
+    - [Paris](lieu)
+
+    - [Londres](lieu)
+
+    - [Lezoux](lieu)
+
+    '
+- examples: '- L''Ã©glise ouvre le plan.
+
+    - Le rÃ©alisateur joue une surprise.
+
+    - Le journaliste ferme une idÃ©e.
+
+    - Le boulanger dÃ©pense une danse.
+
+    - L''oiseau mange un ordre.
+
+    - Le fromager verrouille un emprunt.
+
+    - Le vÃ©tÃ©rinaire organise une preuve.
+
+    - L''hÃ´tel arrose Ã  la radio.
+
+    - Le jardin porte un message.
+
+    - Le jardin fleurit un roman.
+
+    - La lune programme dans le jardin.
+
+    - Le marchÃ© dÃ©couvre un appel.
+
+    - L''opticien ferme une vente.
+
+    - L''Ã©glise vend une vente.
+
+    - La table montre un tableau.
+
+    - Le restaurant montre les amis.
+
+    - Le professeur lance un chauffage.
+
+    - La bibliothÃ¨que vend un gÃ¢teau.
+
+    - Le chien abaisse un chauffage.
+
+    - Le livre nÃ©gocie un secret.
+
+    - Le guide touristique abaisse un paiement.
+
+    - Le couturier trouve dans la forÃªt.
+
+    - Le musÃ©e dessine un poisson.
+
+    - Le livre nÃ©gocie un livre.
+
+    - Le coiffeur refroidit une idÃ©e.
+
+    - L''Ã©cole abaisse un indice.
+
+    - Le banquier nage vite sur la route.
+
+    - La cuisine explore une Ã©conomie.
+
+    - Le photographe Ã©coute un coloriage.
+
+    - L''Ã©crivain cache dans la forÃªt.
+
+    - L''acteur dÃ©core un rÃ©frigÃ©rateur.
+
+    - L''ordinateur portable imagine vite sur la route.
+
+    - L''opticien questionne dans la riviÃ¨re.
+
+    - L''Ã©crivain visite une idÃ©e.
+
+    - Le musÃ©e analyse une formule.
+
+    - Le jardinier rÃ©pare les amis.
+
+    - Le policier encaisse une souris.
+
+    - La tÃ©lÃ© calcule un dessin.
+
+    - Le fromager lÃ¨ve une crÃ©ation.
+
+    - Le peintre dÃ©fend un prÃªt.
+
+    - Le restaurant verrouille un cadeau.
+
+    - Le serveur dessine une information.
+
+    - Le professeur de sport range un secret.
+
+    - Le pilote refroidit une question.
+
+    - L''infirmier convainc un rÃ©frigÃ©rateur.
+
+    - L''arbre nage une discussion.
+
+    - Le soleil calcule un bÃ¢timent.
+
+    - L''ordinateur portable gagne un poÃ¨me.
+
+    - L''Ã©crivain parle les plantes.
+
+    - La salle de bain Ã©conomise une information.
+
+    - La bibliothÃ¨que dessine un rÃ©frigÃ©rateur.
+
+    - La lune Ã©claire un achat.
+
+    - Le plombier lit une question.
+
+    - Le jardinier marche un encaissement.
+
+    - Le policier analyse Ã  la radio.
+
+    - La riviÃ¨re invente un dessin.
+
+    - Le jardinier dÃ©vÃ©rrouille la leÃ§on.
+
+    - Le scientifique soigne un bÃ¢timent.
+
+    - L''ordinateur rÃ©pare dans le jardin.
+
+    - Le fromager encaisse un dessin.
+
+    - Le photographe rÃ©pare dans la piscine.
+
+    - Le bateau analyse un trÃ©sor.
+
+    - L''arbre grimpe les prisonniers.
+
+    - La voiture nourrit un dessin.
+
+    - L''Ã©lectricien programme le salon.
+
+    - La lune montre un dÃ©bat.
+
+    - Le mÃ©canicien donne les amis.
+
+    - L''Ã©glise observe une cachette.
+
+    - Le bureau conduit un roman.
+
+    - Le voisin cuisine une cachette.
+
+    - Le chien analyse les patients.
+
+    - Le centre commercial cherche les patients.
+
+    - La tÃ©lÃ© nage Ã  la radio.
+
+    - L''infirmier pÃªche un ordre.
+
+    - Le zoo fleurit les rÃªves.
+
+    - Le voisin trouve une thÃ©orie.
+
+    - Le chercheur paye un message.
+
+    - L''ordinateur portable boit une dÃ©coration.
+
+    - Le rÃ©alisateur rÃ©pond une chanson.
+
+    - Le fleuriste prÃªte une serrure.
+
+    - La plage argumente une explication.
+
+    - Le coach joue vite sur la route.
+
+    - Le boucher vend les ennemis.
+
+    - L''Ã©lectricien pÃªche un poids.
+
+    - La plage dÃ©pense un emprunt.
+
+    - Le coach enseigne un chauffage.
+
+    - Le soleil dÃ©fend une clÃ©.
+
+    - Le coach donne un secret.
+
+    - La lune explique une dÃ©coration.
+
+    - Le supermarchÃ© mesure une lampe.
+
+    - Le zoo programme une vente.
+
+    - Le mÃ©decin dÃ©pense une preuve.
+
+    - Le photographe balaye dans la forÃªt.
+
+    - La lune invente le bureau.
+
+    - Le pompier encaisse un achat.
+
+    - Le tÃ©lÃ©phone questionne un cerf.
+
+    - Le dÃ©sert prÃªte les rÃªves.
+
+    - L''Ã©lectricien nettoie un levier.
+
+    - Le poissonnier dessine dans le jardin.
+
+    - Le boucher cache une souris.'
+  intent: new_intent_1392
+- examples: '
+
+
+    '
+  intent: test_intent
+- examples: '
+
+
+    '
+  intent: test_intent
+version: '3.1'

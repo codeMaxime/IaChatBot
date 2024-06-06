@@ -2,6 +2,7 @@ import requests
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import json
 
 class ActionMeteo(Action):
 
@@ -21,3 +22,17 @@ class ActionMeteo(Action):
                 temperature = weather_data['current']['temp_c']
                 condition = weather_data['current']['condition']['text']
                 dispatcher.utter
+
+class ActionCollectUnknownPhrases(Action):
+
+    def name(self):
+        return "action_collect_unknown_phrases"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict):
+
+        user_message = tracker.latest_message.get('text')
+        with open('unknown_phrases.txt', 'a', encoding='utf-8') as f:
+            f.write(f"{user_message}\n")
+
+        dispatcher.utter_message(text="Je ne comprends pas, pouvez-vous reformuler ?")
+        return []

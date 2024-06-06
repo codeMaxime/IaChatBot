@@ -1,20 +1,18 @@
-version: "2.0"
 stories:
-  - story: salutation
-    steps:
-      - intent: saluer
-      - action: utter_saluer
-
-  - story: au_revoir
-    steps:
-      - intent: au_revoir
-      - action: utter_au_revoir
-
-  - story: obtenir_meteo
-    steps:
-      - intent: demander_meteo
-      - action: utter_demander_lieu
-      - intent: inform
-        entities:
-          - lieu
-      - action: action_meteo
+- steps:
+  - intent: saluer
+  - action: utter_saluer
+  story: salutation
+- steps:
+  - intent: au_revoir
+  - action: utter_au_revoir
+  story: au_revoir
+- steps:
+  - intent: demander_meteo
+  - action: utter_demander_lieu
+  - entities:
+    - lieu
+    intent: inform
+  - action: action_meteo
+  story: obtenir_meteo
+version: '3.1'
