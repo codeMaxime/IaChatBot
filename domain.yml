@@ -1,136 +1,112 @@
 actions:
-- action_collect_unknown_phrases
+- utter_greet
+- utter_goodbye
+- utter_ask_weather
+- utter_affirm
+- utter_deny
+- utter_offensive_comment
+- utter_sexual_comment
+- utter_ask_time
+- utter_ask_date
+- utter_ask_location
+- utter_ask_joke
+- utter_ask_news
+- utter_ask_how_are_you
+- utter_ask_who_are_you
+- utter_ask_age
 - utter_saluer
 - utter_au_revoir
 - utter_demander_lieu
 - action_meteo
-entities:
-- lieu
+- action_collect_unknown_phrases
 intents:
+- greet
+- goodbye
+- ask_weather
+- affirm
+- deny
+- offensive_comment
+- sexual_comment
+- ask_time
+- ask_date
+- ask_location
+- ask_joke
+- ask_news
+- ask_how_are_you
+- ask_who_are_you
+- ask_age
 - saluer
 - au_revoir
 - demander_meteo
 - inform
-- new_intent_61727
-- new_intent_6732
-- new_intent_53497
-- new_intent_17396
-- new_intent_51211
-- new_intent_9511
-- new_intent_68675
-- new_intent_45571
-- new_intent_76055
-- new_intent_64711
-- new_intent_88815
-- new_intent_51226
-- new_intent_87640
-- new_intent_57326
-- new_intent_74221
-- new_intent_99223
-- new_intent_49669
-- new_intent_87174
-- new_intent_77416
-- new_intent_34359
-- new_intent_67668
-- new_intent_6354
-- new_intent_56437
-- new_intent_3983
-- new_intent_13095
-- new_intent_23201
-- new_intent_79470
-- new_intent_42686
-- new_intent_76610
-- new_intent_95463
-- new_intent_98028
-- new_intent_43257
-- new_intent_75267
-- new_intent_15512
-- new_intent_32022
-- new_intent_20162
-- new_intent_41152
-- new_intent_88792
-- new_intent_35774
-- new_intent_42646
-- new_intent_85533
-- new_intent_91794
-- new_intent_58836
-- new_intent_87422
-- new_intent_99422
-- new_intent_85582
-- new_intent_75508
-- new_intent_15653
-- new_intent_32353
-- new_intent_47039
-- new_intent_73844
-- new_intent_7544
-- new_intent_22775
-- new_intent_31603
-- new_intent_60311
-- new_intent_84650
-- new_intent_50295
-- new_intent_49514
-- new_intent_4302
-- new_intent_28011
-- new_intent_30040
-- new_intent_25990
-- new_intent_68961
-- new_intent_80592
-- new_intent_66682
-- new_intent_45559
-- new_intent_75958
-- new_intent_72128
-- new_intent_25305
-- new_intent_54060
-- new_intent_58071
-- new_intent_60877
-- new_intent_51400
-- new_intent_34770
-- new_intent_48825
-- new_intent_75873
-- new_intent_47518
-- new_intent_69014
-- new_intent_4561
-- new_intent_27513
-- new_intent_47692
-- new_intent_63818
-- new_intent_10333
-- new_intent_29572
-- new_intent_21619
-- new_intent_90484
-- new_intent_20483
-- new_intent_43665
-- new_intent_55201
-- new_intent_47371
-- new_intent_69866
-- new_intent_91638
-- new_intent_84491
-- new_intent_7764
-- new_intent_12606
-- new_intent_59543
-- new_intent_22834
-- new_intent_78244
-- new_intent_20740
-- new_intent_53864
-- new_intent_9625
-- new_intent_3380
-- new_intent_2523
-- new_intent_29629
-- new_intent_17674
 responses:
+  utter_affirm:
+  - text: D'accord.
+  - text: Bien sûr.
+  - text: Absolument.
+  utter_ask_age:
+  - text: Je suis une IA, donc je n'ai pas d'âge au sens traditionnel.
+  - text: Je suis éternellement jeune, car je suis une IA.
+  - text: Mon âge est difficile à définir, étant donné que je suis une création numérique.
+  utter_ask_date:
+  - text: Je ne suis pas capable de donner la date pour le moment.
+  - text: Désolé, je ne peux pas fournir la date actuelle.
+  - text: La date actuelle n'est pas disponible.
+  utter_ask_how_are_you:
+  - text: Je suis juste un programme, mais merci de demander !
+  - text: Je vais bien, merci ! Comment puis-je vous aider ?
+  - text: Je suis toujours prêt à vous aider !
+  utter_ask_joke:
+  - text: Pourquoi les plongeurs plongent-ils toujours en arrière et jamais en avant
+      ? Parce que sinon ils tombent encore dans le bateau.
+  - text: Quelle est la meilleure chose à propos de la Suisse ? Je ne sais pas, mais
+      le drapeau est un plus.
+  - text: Pourquoi les fantômes aiment-ils les ascenseurs ? Parce que ça les élève.
+  utter_ask_location:
+  - text: Je ne suis pas capable de donner la localisation pour le moment.
+  - text: Désolé, je ne peux pas fournir votre position actuelle.
+  - text: La localisation actuelle n'est pas disponible.
+  utter_ask_news:
+  - text: Je ne suis pas capable de fournir des nouvelles pour le moment.
+  - text: Désolé, les actualités ne sont pas disponibles actuellement.
+  - text: Les informations ne sont pas disponibles pour le moment.
+  utter_ask_time:
+  - text: Je ne suis pas capable de donner l'heure pour le moment.
+  - text: Désolé, je ne peux pas fournir l'heure actuelle.
+  - text: L'heure actuelle n'est pas disponible.
+  utter_ask_weather:
+  - text: Je ne suis pas capable de donner des prévisions météorologiques pour le
+      moment.
+  - text: Désolé, je ne peux pas fournir les informations météo.
+  - text: Les prévisions météorologiques ne sont pas disponibles actuellement.
+  utter_ask_who_are_you:
+  - text: Je suis une IA créée pour vous aider. Comment puis-je vous assister ?
+  - text: Je suis votre assistant virtuel. En quoi puis-je vous être utile ?
+  - text: Je suis un programme conçu pour répondre à vos questions.
   utter_au_revoir:
-  - text: Au revoir! Passez une bonne journÃ©e!
+  - text: Au revoir !
   utter_demander_lieu:
-  - text: Pour quelle ville souhaitez-vous connaÃ®tre la mÃ©tÃ©o?
+  - text: Où souhaitez-vous connaître la météo ?
+  utter_deny:
+  - text: D'accord, je comprends.
+  - text: Je vois, merci de me l'avoir dit.
+  - text: Très bien.
+  utter_goodbye:
+  - text: Au revoir ! Passez une bonne journée !
+  - text: À bientôt ! Prenez soin de vous !
+  - text: Adieu ! À la prochaine fois !
+  utter_greet:
+  - text: Bonjour ! Comment puis-je vous aider aujourd'hui ?
+  - text: Salut ! Que puis-je faire pour vous ?
+  - text: Hello ! En quoi puis-je vous être utile ?
+  utter_offensive_comment:
+  - text: Je préfère ne pas répondre à ce genre de commentaires.
+  - text: Veuillez rester respectueux, s'il vous plaît.
+  - text: Je ne répondrai pas à cela.
   utter_saluer:
-  - text: Bonjour! Comment puis-je vous aider aujourd'hui?
-session_config:
-  carry_over_slots_to_new_session: true
-  session_expiration_time: 60
-slots:
-  lieu:
-    influence_conversation: true
-    mappings:
-    - entity: lieu
-      type: from_entity
-    type: text
+  - text: Bonjour !
+  utter_sexual_comment:
+  - text: Ce n'est pas approprié.
+  - text: Je ne réponds pas à ce genre de commentaires.
+  - text: Veuillez rester respectueux, s'il vous plaît.
 version: '3.1'
